@@ -41,6 +41,7 @@ describe('working with radio buttons', () => {
                         // the new one is always checked
                         cy.wrap(radio).check()
                         cy.wrap(radio).should('be.checked')
+
                     }
                 })
             })

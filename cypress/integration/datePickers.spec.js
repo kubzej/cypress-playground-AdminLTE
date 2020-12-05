@@ -44,6 +44,10 @@ describe("working with date pickers", () => {
     })
 
     it("selects custom date", () => {
+        // set initial date
+        const now = new Date(1910, 7, 21).getTime()
+        cy.clock(now)
+
         const day = '16'
         const month = '5'
         const year = '1996'

@@ -62,4 +62,16 @@ describe('working with inputs', () => {
         })
     })
 
+    it('checks visibility of input', () => {
+        cy.visit('/pages/forms/general.html')
+        cy.get('[placeholder="Enter ..."]').first().should('not.be.disabled')
+        cy.get('[placeholder="Enter ..."]').eq(1).should('be.disabled')
+    })
+
+    it('focus and blur text area', () => {
+        cy.visit('/pages/forms/general.html')
+        // cy.get('[placeholder="Enter ..."]').first()
+        cy.get('[placeholder="Enter ..."]').first().focus().type('Typing into focused area').blur()
+    })
+
 })

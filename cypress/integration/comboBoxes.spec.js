@@ -47,5 +47,8 @@ describe('working with combo boxes', () => {
         cy.get('.select2-search__field').last().type('Al')
         cy.get('.select2-results li').last().click()
         cy.get('.select2-selection__rendered').first().should('contain', 'California')
+        cy.contains('Alabama').should('not.be.selected')
+        cy.contains('California').should('be.selected')
+ 
     })
 })
