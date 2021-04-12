@@ -48,9 +48,9 @@ describe("working with date pickers", () => {
         const now = new Date(1910, 7, 21).getTime()
         cy.clock(now)
 
-        const day = '16'
-        const month = '5'
-        const year = '1996'
+        const day = '12'
+        const month = '11'
+        const year = '1998'
         selectDate(day, month, year)
         cy.get('#reservationdate > .form-control').should('have.value', month.padStart(2, 0) + '/' + day.padStart(2, 0) + '/' + year)
     })
